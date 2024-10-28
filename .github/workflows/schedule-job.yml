@@ -1,0 +1,16 @@
+name: Simple Scheduled Workflow
+
+on:
+  schedule:
+    cron: '* * 28 10 *'
+
+jobs:
+  say-hello:
+    runs-on: self-hosted  # This tells the workflow to use your self-hosted runner
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Optional step to ensure the repo is checked out
+
+      - name: Say Hello
+        run: echo "Hello World"

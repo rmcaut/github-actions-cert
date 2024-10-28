@@ -2,7 +2,7 @@ name: Simple Scheduled Workflow
 
 on:
   schedule:
-    cron: '* * 28 10 *'
+    - cron: '* * 28 10 *'
 
 jobs:
   say-hello:
